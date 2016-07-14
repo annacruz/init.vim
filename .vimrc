@@ -7,7 +7,7 @@ set splitbelow
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin("~/.vim/rezendebundle/")
+call vundle#begin("~/.vim/rezende/")
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
