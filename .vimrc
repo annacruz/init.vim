@@ -7,7 +7,7 @@ set splitbelow
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin("~/.vim/rezende/")
+call vundle#begin("~/.vim/rezende/Plugins")
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -86,8 +86,9 @@ set statusline+=\ \|%L\ lines\| "total lines
 set statusline+=\ %P            "percent through file
 set laststatus=2
 
-"NERDTree
-autocmd VimEnter * NERDTreeClose
+"NERDTree coisas
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 map <silent> <F2> :NERDTreeToggle<Return>
 
@@ -146,8 +147,7 @@ map <silent> <F3> :ccl<CR>
 let g:pymode_rope_goto_definition_bind = "<C-]>"
 
 " Override view python doc key shortcut to Ctrl-Shift-d
-let g:pymode_doc_bind = "<C-S-d>"
-let g:pymode_folding = 1
+let g:pymode_folding = 0
 "Use C e M como Classe e Metodo
 let g:pymode_motion = 1
 let g:pymode_doc = 1
@@ -158,7 +158,6 @@ let g:pymode_breakpoint = 1
 let g:pymode_lint = 0
 let g:pymode_rope_completion = 1
 let g:pymode_rope_autoimport = 1
-let g:pymode_rope_goto_definition_bind = '<C-c>g'
 let g:pymode_rope_goto_definition_cmd = 'vnew'
 let g:pymode_rope_rename_bind = '<C-c>rr'
 let g:pymode_rope_rename_module_bind = '<C-c>r1r'
