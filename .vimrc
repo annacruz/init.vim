@@ -12,35 +12,38 @@ call vundle#begin("~/.vim/rezende/Plugins")
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" Plugins
-Plugin 'vim-scripts/vim-auto-save'
+"Plugins
+"Plugin 'vim-scripts/vim-auto-save'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'alfredodeza/pytest.vim'
 Plugin 'bling/vim-airline'
+
 Plugin 'chrisbra/Colorizer'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'elzr/vim-json'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'gagoar/StripWhiteSpaces'
+"Plugin 'gagoar/StripWhiteSpaces'
 Plugin 'groenewege/vim-less'
-Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'klen/python-mode'
 Plugin 'motus/pig.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
 Plugin 'rodjek/vim-puppet'
-Plugin 'roman/golden-ratio'
-Plugin 'scrooloose/nerdtree'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'wavded/vim-stylus'
 Plugin 'EasyMotion'
+Plugin 'roman/golden-ratio'
+"Motions for CamelCase and underscore_case
+Plugin 'bkad/CamelCaseMotion'
 " All of your Plugins must be added before the following line
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -86,7 +89,7 @@ set statusline+=\ \|%L\ lines\| "total lines
 set statusline+=\ %P            "percent through file
 set laststatus=2
 
-"NERDTree coisas
+"NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
@@ -131,6 +134,9 @@ nmap <silent><Leader>f <Esc>:Pytest function<CR>
 nmap <silent><Leader>c <Esc>:Pytest class<CR>
 nmap <silent><Leader>m <Esc>:Pytest method<CR>
 
+"Qui
+nnoremap <silent>Q ZQ
+
 "Use Y like D and C
 nmap Y y$
 
@@ -145,7 +151,7 @@ map <silent> <F3> :ccl<CR>
 
 " Override go-to.definition key shortcut to Ctrl-]
 let g:pymode_rope_goto_definition_bind = "<C-]>"
-
+let g:pymode_indent = 1
 " Override view python doc key shortcut to Ctrl-Shift-d
 let g:pymode_folding = 0
 "Use C e M como Classe e Metodo
@@ -155,9 +161,18 @@ let g:pymode_doc_bind = 'K'
 let g:pymode_virtualenv = 1
 let g:pymode_run = 0
 let g:pymode_breakpoint = 1
-let g:pymode_lint = 0
+let g:pymode_lint = 1
+let g:pymode_lint_on_write = 1
+let g:pymode_lint_message = 0
+"Ignore line too long error
+let g:pymode_lint_ignore = "E501,W"
+let g:pymode_lint_cwindow = 0
+let g:pymode_lint_message = 1
 let g:pymode_rope_completion = 1
+let g:pymode_rope_complete_on_dot = 1
+let g:pymode_rope_completion_bind = '<C-Space>'
 let g:pymode_rope_autoimport = 1
+"Open definition in a new vsplit
 let g:pymode_rope_goto_definition_cmd = 'vnew'
 let g:pymode_rope_rename_bind = '<C-c>rr'
 let g:pymode_rope_rename_module_bind = '<C-c>r1r'
@@ -170,6 +185,12 @@ let g:pymode_rope_move_bind = '<C-c>rv'
 let g:pymode_rope_change_signature_bind = '<C-c>rs'
 
 "AUTOSAVE
-let g:auto_save = 1  " enable AutoSave on Vim startup
-let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
-let g:auto_save_silent = 0  " do not display the auto-save notification
+"let g:auto_save = 0  " enable AutoSave on Vim startup
+"let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
+"let g:auto_save_silent = 0  " do not display the auto-save notification
+
+"CamelCase
+call camelcasemotion#CreateMotionMappings('<leader>')
+
+let g:netrw_liststyle=3
+let g:netrw_banner=0
