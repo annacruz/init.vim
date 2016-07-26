@@ -134,7 +134,7 @@ nmap <silent><Leader>f <Esc>:Pytest function<CR>
 nmap <silent><Leader>c <Esc>:Pytest class<CR>
 nmap <silent><Leader>m <Esc>:Pytest method<CR>
 
-"Qui
+"Quit with Q
 nnoremap <silent>Q ZQ
 
 "Use Y like D and C
@@ -152,7 +152,6 @@ map <silent> <F3> :ccl<CR>
 " Override go-to.definition key shortcut to Ctrl-]
 let g:pymode_rope_goto_definition_bind = "<C-]>"
 let g:pymode_indent = 1
-" Override view python doc key shortcut to Ctrl-Shift-d
 let g:pymode_folding = 0
 "Use C e M como Classe e Metodo
 let g:pymode_motion = 1
@@ -191,6 +190,3 @@ let g:pymode_rope_change_signature_bind = '<C-c>rs'
 
 "CamelCase
 call camelcasemotion#CreateMotionMappings('<leader>')
-
-let g:netrw_liststyle=3
-let g:netrw_banner=0
