@@ -17,7 +17,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'alfredodeza/pytest.vim'
+"Plugin 'alfredodeza/pytest.vim'
 Plugin 'bling/vim-airline'
 
 Plugin 'chrisbra/Colorizer'
@@ -129,10 +129,13 @@ set number
 noremap <silent>+ :let @*=@%<CR>
 
 " Pytest
-nmap <silent><Leader>F <Esc>:Pytest file<CR>
-nmap <silent><Leader>f <Esc>:Pytest function<CR>
-nmap <silent><Leader>c <Esc>:Pytest class<CR>
-nmap <silent><Leader>m <Esc>:Pytest method<CR>
+"nmap <silent><Leader>F <Esc>:Pytest file<CR>
+"nmap <silent><Leader>f <Esc>:Pytest function<CR>
+"nmap <silent><Leader>c <Esc>:Pytest class<CR>
+"nmap <silent><Leader>m <Esc>:Pytest method<CR>
+
+"Save with S
+nnoremap S :w<CR>
 
 "Quit with Q
 nnoremap <silent>Q ZQ
@@ -183,10 +186,8 @@ let g:pymode_rope_use_function_bind = '<C-c>ru'
 let g:pymode_rope_move_bind = '<C-c>rv'
 let g:pymode_rope_change_signature_bind = '<C-c>rs'
 
-"AUTOSAVE
-"let g:auto_save = 0  " enable AutoSave on Vim startup
-"let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
-"let g:auto_save_silent = 0  " do not display the auto-save notification
+"MultiCursor
+let g:multi_cursor_exit_from_insert_mode=0
 
 "CamelCase
 call camelcasemotion#CreateMotionMappings('<leader>')
