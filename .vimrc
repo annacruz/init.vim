@@ -11,36 +11,37 @@ call vundle#begin("~/.vim/rezende/Plugins")
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
 "Plugins
-"Plugin 'vim-scripts/vim-auto-save'
-Plugin 'airblade/vim-gitgutter'
+"Motions for CamelCase and underscore_case
 "Plugin 'alfredodeza/pytest.vim'
+"Plugin 'gagoar/StripWhiteSpaces'
+"Plugin 'vim-scripts/vim-auto-save'
+"Plugin 'kana/vim-textobj-entire'
+Plugin 'EasyMotion'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'bkad/CamelCaseMotion'
 Plugin 'bling/vim-airline'
-
 Plugin 'chrisbra/Colorizer'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'elzr/vim-json'
 Plugin 'flazz/vim-colorschemes'
-"Plugin 'gagoar/StripWhiteSpaces'
 Plugin 'groenewege/vim-less'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'klen/python-mode'
+Plugin 'mhinz/vim-startify'
 Plugin 'motus/pig.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
 Plugin 'rodjek/vim-puppet'
+Plugin 'roman/golden-ratio'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-vinegar'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'EasyMotion'
-Plugin 'roman/golden-ratio'
-"Motions for CamelCase and underscore_case
-Plugin 'bkad/CamelCaseMotion'
+Plugin 'wellle/targets.vim'
 " All of your Plugins must be added before the following line
 
 call vundle#end()            " required
@@ -142,8 +143,8 @@ let g:pymode_virtualenv = 1
 let g:pymode_run = 0
 let g:pymode_run_bind = '<leader>r'
 "Breakpoint
-let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_bind = '<leader>q'
+let g:pymode_breakpoint = 0
+let g:pymode_breakpoint_bind = '<leader>l'
 "Lint
 let g:pymode_lint = 1
 let g:pymode_lint_on_write = 1
@@ -183,3 +184,52 @@ let g:multi_cursor_exit_from_insert_mode=0
 "CamelCase
 "<leader>b is being used by pymode
 call camelcasemotion#CreateMotionMappings('<leader>')
+
+function! s:filter_header(lines) abort
+    let longest_line   = max(map(copy(a:lines), 'len(v:val)'))
+    let centered_lines = map(copy(a:lines),
+        \ 'repeat(" ", (&columns / 2) - (longest_line / 2)) . v:val')
+    return centered_lines
+endfunction
+
+let g:startify_custom_header = s:filter_header([
+    \ '           )     )      )  ',
+    \ '        ( /(  ( /(   ( /(  ',
+    \ ' (   (  )\()) )\())  )\()) ',
+    \ ' )\  )\((_)\ ((_)\  ((_)\  ',
+    \ '((_)((_) ((_)__((_)__ ((_) ',
+    \ '\ \ / / / _ \\ \/ /\ \ / / ',
+    \ ' \ V / | (_) |>  <  \ V /  ',
+    \ '  \_/   \___//_/\_\  |_|   ',
+    \ ])
+
+autocmd User Startified setlocal cursorline
+
+let g:startify_enable_special         = 0
+let g:startify_files_number           = 8
+let g:startify_relative_path          = 1
+let g:startify_change_to_dir          = 1
+let g:startify_update_oldfiles        = 1
+let g:startify_session_autoload       = 1
+let g:startify_session_persistence    = 1
+let g:startify_session_delete_buffers = 1
+
+let g:startify_skiplist = [
+      \ 'COMMIT_EDITMSG',
+      \ 'bundle/.*/doc',
+      \ '/data/repo/neovim/runtime/doc',
+      \ '/Users/mhi/local/vim/share/vim/vim74/doc',
+      \ ]
+
+let g:startify_bookmarks = [
+      \ { 'c': '~/.vim/rezende/.vimrc' },
+      \ ]
+
+hi StartifyBracket ctermfg=240
+hi StartifyFile    ctermfg=147
+hi StartifyFooter  ctermfg=240
+hi StartifyHeader  ctermfg=123
+hi StartifyNumber  ctermfg=215
+hi StartifyPath    ctermfg=245
+hi StartifySlash   ctermfg=240
+hi StartifySpecial ctermfg=240
