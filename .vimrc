@@ -10,10 +10,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin("~/.vim/rezende/Plugins")
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+" All of your Plugins must be added before the following line
 "Plugin 'alfredodeza/pytest.vim'
 "Plugin 'gagoar/StripWhiteSpaces'
 "Plugin 'vim-scripts/vim-auto-save'
+Plugin 'kana/vim-textobj-user'
+Plugin 'kana/vim-textobj-entire'
 Plugin 'EasyMotion'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bkad/CamelCaseMotion'
@@ -24,14 +26,14 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'elzr/vim-json'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'gmarik/Vundle.vim'
 Plugin 'groenewege/vim-less'
-Plugin 'kana/vim-textobj-entire'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'klen/python-mode'
 Plugin 'mhinz/vim-startify'
+Plugin 'mileszs/ack.vim'
 Plugin 'motus/pig.vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'rking/ag.vim'
 Plugin 'rodjek/vim-puppet'
 Plugin 'roman/golden-ratio'
 Plugin 'terryma/vim-multiple-cursors'
@@ -40,7 +42,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-vinegar'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'wellle/targets.vim'
-" All of your Plugins must be added before the following line
 
 
 call vundle#end()            " required
@@ -60,9 +61,6 @@ set noswf
 
 au FocusLost * :wa
 set noshowmode
-
-" Ag
-let g:ag_working_path_mode="r"
 
 "Status Bar
 set statusline=
@@ -235,3 +233,12 @@ hi StartifySpecial ctermfg=240
 
 "Make K search word under cursor
 nnoremap K yiw:Ag <C-r>"<CR>
+
+"Since AgVim is dead
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+cnoreabbrev ag Ack                                                                           
+cnoreabbrev aG Ack                                                                           
+cnoreabbrev Ag Ack                                                                           
+cnoreabbrev AG Ack  
