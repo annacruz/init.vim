@@ -1,5 +1,5 @@
 set nocompatible
-
+set clipboard=unnamed
 set paste
 filetype off
 set splitright
@@ -11,12 +11,9 @@ call vundle#begin("~/.vim/rezende/Plugins")
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-"Plugins
-"Motions for CamelCase and underscore_case
 "Plugin 'alfredodeza/pytest.vim'
 "Plugin 'gagoar/StripWhiteSpaces'
 "Plugin 'vim-scripts/vim-auto-save'
-"Plugin 'kana/vim-textobj-entire'
 Plugin 'EasyMotion'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bkad/CamelCaseMotion'
@@ -28,6 +25,7 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'elzr/vim-json'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'groenewege/vim-less'
+Plugin 'kana/vim-textobj-entire'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'klen/python-mode'
 Plugin 'mhinz/vim-startify'
@@ -43,6 +41,7 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'wellle/targets.vim'
 " All of your Plugins must be added before the following line
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -136,7 +135,7 @@ let g:pymode_indent = 1
 let g:pymode_folding = 0
 "Use C e M como Classe e Metodo
 let g:pymode_motion = 1
-let g:pymode_doc = 1
+let g:pymode_doc = 0
 let g:pymode_doc_bind = 'K'
 let g:pymode_virtualenv = 1
 "Run code
@@ -233,3 +232,6 @@ hi StartifyNumber  ctermfg=215
 hi StartifyPath    ctermfg=245
 hi StartifySlash   ctermfg=240
 hi StartifySpecial ctermfg=240
+
+"Make K search word under cursor
+nnoremap K yiw:Ag <C-r>"<CR>
