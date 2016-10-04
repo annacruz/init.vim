@@ -31,7 +31,6 @@ Plugin 'groenewege/vim-less'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'klen/python-mode'
 Plugin 'mhinz/vim-startify'
-Plugin 'mileszs/ack.vim'
 Plugin 'motus/pig.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rodjek/vim-puppet'
@@ -42,6 +41,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-vinegar'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'wellle/targets.vim'
+Plugin 'rking/ag.vim'
 
 
 call vundle#end()            " required
@@ -134,7 +134,6 @@ let g:pymode_folding = 0
 "Use C e M como Classe e Metodo
 let g:pymode_motion = 1
 let g:pymode_doc = 0
-let g:pymode_doc_bind = 'K'
 let g:pymode_virtualenv = 1
 "Run code
 let g:pymode_run = 0
@@ -179,8 +178,7 @@ let g:multi_cursor_exit_from_insert_mode=0
 let g:multi_cursor_exit_from_insert_mode=0
 
 "CamelCase
-"<leader>b is being used by pymode
-call camelcasemotion#CreateMotionMappings('<leader>')
+call camelcasemotion#CreateMotionMappings(',')
 
 function! s:filter_header(lines) abort
     let longest_line   = max(map(copy(a:lines), 'len(v:val)'))
@@ -205,7 +203,7 @@ autocmd User Startified setlocal cursorline
 let g:startify_enable_special         = 0
 let g:startify_files_number           = 8
 let g:startify_relative_path          = 1
-let g:startify_change_to_dir          = 1
+let g:startify_change_to_dir          = 0
 let g:startify_update_oldfiles        = 1
 let g:startify_session_autoload       = 1
 let g:startify_session_persistence    = 1
@@ -232,13 +230,4 @@ hi StartifySlash   ctermfg=240
 hi StartifySpecial ctermfg=240
 
 "Make K search word under cursor
-nnoremap K yiw:Ag <C-r>"<CR>
-
-"Since AgVim is dead
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-cnoreabbrev ag Ack                                                                           
-cnoreabbrev aG Ack                                                                           
-cnoreabbrev Ag Ack                                                                           
-cnoreabbrev AG Ack  
+nnoremap K yiw:Ag! <C-r>"<CR>
