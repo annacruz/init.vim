@@ -4,11 +4,11 @@ set paste
 filetype off
 set splitright
 set splitbelow
-
+set wildmenu
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin("~/.vim/rezende/Plugins")
-
+set path+=**
 " let Vundle manage Vundle, required
 " All of your Plugins must be added before the following line
 "Plugin 'alfredodeza/pytest.vim'
@@ -37,19 +37,23 @@ Plugin 'rodjek/vim-puppet'
 Plugin 'roman/golden-ratio'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-vinegar'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'wellle/targets.vim'
 Plugin 'rking/ag.vim'
-
+Plugin 'felixhummel/setcolors.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax enable
 set background=dark
-colorscheme monokai
+"colorscheme base16-railscasts
+"Yellow and red
+"colorscheme baycomb
+colorscheme beekai
 
 set encoding=utf-8
 "set fileencoding=utf-8
@@ -231,3 +235,9 @@ hi StartifySpecial ctermfg=240
 
 "Make K search word under cursor
 nnoremap K yiw:Ag! <C-r>"<CR>
+
+" If you prefer the Omni-Completion tip window to close when a selection is
+" made, these lines close it on movement in insert mode or when leaving
+" insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
