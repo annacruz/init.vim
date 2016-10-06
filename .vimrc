@@ -114,7 +114,7 @@ noremap <silent>+ :let @*=@%<CR>
 nnoremap S :w<CR>
 
 "Quit with Q
-nnoremap <silent>Q ZQ
+nnoremap <silent>Q ZZ
 
 "Use Y like D and C
 nmap Y y$
