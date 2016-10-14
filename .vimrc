@@ -5,6 +5,7 @@ filetype off
 set splitright
 set splitbelow
 set wildmenu
+set scrolloff=10
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin("~/.vim/rezende/Plugins")
@@ -29,7 +30,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'klen/python-mode'
+"Plugin 'klen/python-mode'
 Plugin 'mhinz/vim-startify'
 Plugin 'motus/pig.vim'
 Plugin 'pangloss/vim-javascript'
@@ -50,10 +51,7 @@ filetype plugin indent on    " required
 
 syntax enable
 set background=dark
-"colorscheme base16-railscasts
-"Yellow and red
-"colorscheme baycomb
-colorscheme beekai
+colorscheme monokai
 
 set encoding=utf-8
 "set fileencoding=utf-8
@@ -99,7 +97,6 @@ set cursorline
 set wildignore+=*/tmp/*,*/bower_components/*,*/node_modules/*,*.so,*.swp,*.zip,*/.git/*,*/coverage/*
 
 set number
-set relativenumber
 
 "set ar
 noremap <silent>+ :let @*=@%<CR>
@@ -192,14 +189,7 @@ function! s:filter_header(lines) abort
 endfunction
 
 let g:startify_custom_header = s:filter_header([
-    \ '           )     )      )  ',
-    \ '        ( /(  ( /(   ( /(  ',
-    \ ' (   (  )\()) )\())  )\()) ',
-    \ ' )\  )\((_)\ ((_)\  ((_)\  ',
-    \ '((_)((_) ((_)__((_)__ ((_) ',
-    \ '\ \ / / / _ \\ \/ /\ \ / / ',
-    \ ' \ V / | (_) |>  <  \ V /  ',
-    \ '  \_/   \___//_/\_\  |_|   ',
+    \ 'Under construction',
     \ ])
 
 autocmd User Startified setlocal cursorline
