@@ -2,7 +2,11 @@
 " Maintainer:   Tim Pope <http://tpo.pe/>
 " Version:      1.1
 
+let mapleader=","
 set nocompatible
+set showmatch
+set ignorecase
+set smartcase
 
 if exists('g:loaded_sensible') || &compatible
   finish
@@ -141,7 +145,6 @@ set background=dark
 colorscheme monokai
 
 "set fileencoding=utf-8
-set history=100
 set undolevels=1000
 
 set noswf
@@ -239,7 +242,7 @@ let g:multi_cursor_exit_from_insert_mode=0
 let g:multi_cursor_exit_from_insert_mode=0
 
 "CamelCase
-call camelcasemotion#CreateMotionMappings(',')
+call camelcasemotion#CreateMotionMappings('\')
 
 function! s:filter_header(lines) abort
     let longest_line   = max(map(copy(a:lines), 'len(v:val)'))
