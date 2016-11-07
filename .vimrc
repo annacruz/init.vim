@@ -55,7 +55,6 @@ colorscheme monokai
 
 set encoding=utf-8
 "set fileencoding=utf-8
-set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 set history=100
 set undolevels=1000
 
@@ -231,3 +230,4 @@ nnoremap K yiw:Ag! <C-r>"<CR>
 " insert mode
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
