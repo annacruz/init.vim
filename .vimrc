@@ -1,12 +1,10 @@
-" sensible.vim - Defaults everyone can agree on
-" Maintainer:   Tim Pope <http://tpo.pe/>
-" Version:      1.1
-
 let mapleader=","
 set nocompatible
 set showmatch
 set ignorecase
 set smartcase
+set splitright
+set splitbelow
 
 if exists('g:loaded_sensible') || &compatible
   finish
@@ -108,6 +106,8 @@ set path+=**
 "Plugin 'alfredodeza/pytest.vim'
 "Plugin 'gagoar/StripWhiteSpaces'
 "Plugin 'vim-scripts/vim-auto-save'
+"Plugin 'xolox/vim-easytags'
+"Plugin 'xolox/vim-misc'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
 Plugin 'EasyMotion'
@@ -134,6 +134,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-vinegar'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'wellle/targets.vim'
 Plugin 'rking/ag.vim'
@@ -143,6 +144,7 @@ call vundle#end()            " required
 
 set background=dark
 colorscheme monokai
+"colorscheme mustang
 
 "set fileencoding=utf-8
 set undolevels=1000
@@ -238,9 +240,6 @@ let g:pymode_options_colorcolumn = 0
 "MultiCursor
 let g:multi_cursor_exit_from_insert_mode=0
 
-"MULTICURSOR
-let g:multi_cursor_exit_from_insert_mode=0
-
 "CamelCase
 call camelcasemotion#CreateMotionMappings('\')
 
@@ -295,3 +294,8 @@ nnoremap K yiw:Ag! <C-r>"<CR>
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
+"Buffer
+nnoremap <F5> :buffers<CR>:buffer<Space>
+
+"Airline
