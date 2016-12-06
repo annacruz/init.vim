@@ -6,6 +6,7 @@ set ignorecase
 set smartcase
 set splitright
 set splitbelow
+set clipboard=unnamed
 
 if exists('g:loaded_sensible') || &compatible
   finish

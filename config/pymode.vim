@@ -10,7 +10,7 @@ let g:pymode_virtualenv = 1
 let g:pymode_run = 0
 let g:pymode_run_bind = '<leader>r'
 "Breakpoint
-let g:pymode_breakpoint = 0
+let g:pymode_breakpoint = 1
 let g:pymode_breakpoint_bind = '<leader>l'
 "Lint
 let g:pymode_lint = 1
