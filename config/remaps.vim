@@ -7,3 +7,4 @@ vnoremap y myy`y
 nnoremap <CR> o<Esc>
 map <silent> <F3> :ccl<CR>
 nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap K yiw:Ag! <C-R>"<CR>
