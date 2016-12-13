@@ -108,8 +108,6 @@ set cursorline
 
 set wildignore+=*/tmp/*,*/bower_components/*,*/node_modules/*,*.so,*.swp,*.zip,*/.git/*,*/coverage/*
 
-set relativenumber
-
 set number
 
 " If you prefer the Omni-Completion tip window to close when a selection is
