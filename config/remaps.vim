@@ -4,6 +4,9 @@ noremap <silent>+ :let @*=@%<CR>
 "Save files on s
 noremap s :w<CR>
 
+"Search in the project with S
+nnoremap S :Ag! 
+
 " Save and Quit with Q
 nnoremap <silent>Q ZZ
 
