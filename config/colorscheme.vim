@@ -1,2 +1,2 @@
 set background=dark
-colorscheme monokai
+colorscheme 1989
