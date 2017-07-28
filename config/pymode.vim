@@ -1,4 +1,4 @@
-" Override go-to.definition key shortcut to Ctrl-]
+"Open definition in a new vsplit
 let g:pymode_rope_goto_definition_cmd = 'vnew'
 let g:pymode_indent = 1
 let g:pymode_folding = 0
@@ -13,7 +13,7 @@ let g:pymode_run_bind = '<leader>r'
 let g:pymode_breakpoint = 1
 let g:pymode_breakpoint_bind = '<leader>l'
 "Lint
-let g:pymode_lint = 1
+let g:pymode_lint = 0
 let g:pymode_lint_on_write = 1
 let g:pymode_lint_message = 1
 let g:pymode_lint_ignore = "E501,W"
@@ -28,8 +28,8 @@ let g:pymode_rope_completion_bind = '<C-Space>'
 let g:pymode_rope_organize_imports_bind = '<C-c>ro'
 let g:pymode_rope_autoimport = 1
 let g:pymode_rope_autoimport_bind = '<C-c>ra'
+" Override go-to.definition key shortcut to Ctrl-]
 let g:pymode_rope_goto_definition_bind = "<C-]>"
-"Open definition in a new vsplit
 let g:pymode_rope_show_doc_bind = '<C-c>d'
 let g:pymode_rope_rename_bind = '<C-c>rr'
 let g:pymode_rope_rename_module_bind = '<C-c>r1r'
