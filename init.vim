@@ -1,10 +1,10 @@
 set nocompatible
 filetype off
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.config/nvim/
-set rtp+=~/.config/nvim/bundle/Vundle.vim
+set rtp+=~/.config/vrvim/
+set rtp+=~/.vim/bundle/Vundle.vim
 
-call vundle#begin("~/.config/nvim/Plugins")
+call vundle#begin("~/.config/vrvim/Plugins")
 
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bkad/CamelCaseMotion'
@@ -16,7 +16,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'felixhummel/setcolors.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'gmarik/Vundle.vim'
-"<leader>P to preview html, markdown 
+"<leader>P to preview html, markdown
 Plugin 'greyblake/vim-preview'
 Plugin 'groenewege/vim-less'
 Plugin 'kana/vim-textobj-entire'
