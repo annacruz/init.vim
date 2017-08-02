@@ -33,13 +33,10 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-vinegar'
+Plugin 'tpope/vim-sensible'
 Plugin 'w0rp/ale'
 Plugin 'wellle/targets.vim'
 
 call vundle#end()            " required
 filetype plugin indent on
 runtime! config/*.vim
-"Activate matchit.vim
-if !exists('loaded_matchit')
-    source $VIMRUNTIME/macros/matchit.vim
-endif
