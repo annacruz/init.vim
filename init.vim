@@ -1,10 +1,10 @@
 set nocompatible
 filetype off
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.config/vrvim/
-set rtp+=~/.config/vrvim/bundle/Vundle.vim
+set rtp+=$HOME/AppData/Local/nvim
+set rtp+=$HOME/AppData/Local/nvim/bundle/Vundle.vim
 
-call vundle#begin("~/.config/vrvim/Plugins")
+call vundle#begin("$HOME/AppData/Local/nvim/Plugins")
 
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bkad/CamelCaseMotion'
