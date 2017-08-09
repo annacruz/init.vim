@@ -8,27 +8,21 @@ let g:pymode_doc = 0
 let g:pymode_virtualenv = 1
 "Run code
 let g:pymode_run = 0
-let g:pymode_run_bind = '<leader>r'
 "Breakpoint
 let g:pymode_breakpoint = 1
 let g:pymode_breakpoint_bind = '<leader>l'
 "Lint
 let g:pymode_lint = 0
-let g:pymode_lint_on_write = 1
-let g:pymode_lint_message = 1
-let g:pymode_lint_ignore = "E501,W"
-let g:pymode_lint_cwindow = 0
-let g:pymode_lint_message = 1
-let g:pymode_lint_signs = 1
-"Completion
+"Rope
 let g:pymode_rope = 1
+
 let g:pymode_rope_completion = 1
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_completion_bind = '<C-Space>'
+
 let g:pymode_rope_organize_imports_bind = '<C-c>ro'
 let g:pymode_rope_autoimport = 1
 let g:pymode_rope_autoimport_bind = '<C-c>ra'
-" Override go-to.definition key shortcut to Ctrl-]
 let g:pymode_rope_goto_definition_bind = "<C-]>"
 let g:pymode_rope_show_doc_bind = '<C-c>d'
 let g:pymode_rope_rename_bind = '<C-c>rr'
