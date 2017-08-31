@@ -37,10 +37,12 @@ nnoremap E Ea
 noremap <tab> <c-w><c-w>
 
 "Run macros on every line visual mode
-
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
 function! ExecuteMacroOverVisualRange()
   echo "@".getcmdline()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
+
+nnoremap # #zz
+nnoremap * *zz

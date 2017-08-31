@@ -2,45 +2,45 @@ set nocompatible
 map <Space> <Leader>
 set showcmd
 filetype off
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.config/vrvim/
-set rtp+=~/.config/vrvim/bundle/Vundle.vim
-call vundle#begin("~/.config/vrvim/Plugins")
 
-"Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'bkad/CamelCaseMotion'
-Plugin 'bling/vim-airline'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'gmarik/Vundle.vim'
-Plugin 'greyblake/vim-preview'
-Plugin 'groenewege/vim-less'
-Plugin 'kana/vim-textobj-entire'
-Plugin 'kana/vim-textobj-user'
-Plugin 'klen/python-mode'
-Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'majutsushi/tagbar'
-Plugin 'mhinz/vim-startify'
-Plugin 'rking/ag.vim'
-Plugin 'roman/golden-ratio'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-rhubarb'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-sleuth'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-vinegar'
-Plugin 'w0rp/ale'
-Plugin 'wellle/targets.vim'
+call plug#begin('~/.config/vrvim/plugged')
+"Plug 'christoomey/vim-tmux-navigator'
+Plug 'airblade/vim-gitgutter'
+Plug 'bkad/CamelCaseMotion'
+Plug 'bling/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'flazz/vim-colorschemes'
+Plug 'gmarik/Vundle.vim'
+Plug 'greyblake/vim-preview'
+Plug 'groenewege/vim-less'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-user'
+Plug 'klen/python-mode'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'majutsushi/tagbar'
+Plug 'mhinz/vim-startify'
+Plug 'rking/ag.vim'
+Plug 'roman/golden-ratio'
+Plug 'sheerun/vim-polyglot'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vinegar'
+Plug 'w0rp/ale'
+Plug 'wellle/targets.vim'
+call plug#end()
 
 
-call vundle#end()            " required
 filetype plugin indent on
 
 runtime! config/*.vim
