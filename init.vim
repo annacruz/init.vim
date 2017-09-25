@@ -7,17 +7,19 @@ filetype off
 set rtp+=~/.config/vrvim/
 
 call plug#begin('~/.config/vrvim/plugged')
+
 "Python 
 " Plug 'Shougo/deoplete.nvim'
 " Plug 'Shougo/echodoc.vim'
+Plug 'davidhalter/jedi-vim'
 Plug 'klen/python-mode'
 Plug 'w0rp/ale'
-Plug 'davidhalter/jedi-vim'
 
-Plug 'christoomey/vim-tmux-navigator'
+" Plug 'simeji/winresizer'
 Plug 'airblade/vim-gitgutter'
 Plug 'bkad/CamelCaseMotion'
 Plug 'bling/vim-airline'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'flazz/vim-colorschemes'
@@ -26,11 +28,11 @@ Plug 'greyblake/vim-preview'
 Plug 'groenewege/vim-less'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-user'
-" Plug 'ludovicchabant/vim-gutentags'
-" Plug 'majutsushi/tagbar'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
 Plug 'rking/ag.vim'
-Plug 'simeji/winresizer'
+Plug 'roman/golden-ratio'
 Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'

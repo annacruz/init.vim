@@ -1,1 +1,1 @@
-let g:loaded_golden_ratio = 0
+let g:golden_ratio_exclude_nonmodifiable = 1
