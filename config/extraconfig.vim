@@ -5,7 +5,6 @@ set cursorline
 set mouse=a
 set clipboard+=unnamedplus
 set number
-set relativenumber
 
 if exists("g:ctrl_user_command")
     unlet g:ctrlp_user_command
@@ -23,4 +22,4 @@ set incsearch
 " the tests inside vim without having to save all files first.
 au FocusLost,WinLeave * :silent! wa
 
-set wildignore+=*.pyc
+set wildignore+=*.pyc,node_modules

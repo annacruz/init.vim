@@ -17,24 +17,17 @@ nmap Y y$
 vnoremap y myy`y
 
 "Close quickfix
-map <silent> <F3> :ccl<CR>
+map <silent> <F2> :ccl<CR>
 
 "Search through buffers
-nnoremap <F5> :CtrlPBuffer<CR>
+nnoremap <F3> :CtrlPBuffer<CR>
 
 "Search word in project
 nnoremap K yiw:Ag! <C-R>"<CR>
 
-" Navigate properly when lines are wrapped
-nnoremap j gj
-nnoremap k gk
-
 "More useful e AND E
 nnoremap e ea
 nnoremap E Ea
-
-" Tab between buffers
-noremap <tab> <c-w><c-w>
 
 "Run macros on every line visual mode
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>

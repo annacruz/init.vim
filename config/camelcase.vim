@@ -1,1 +1,1 @@
-call camelcasemotion#CreateMotionMappings('\')
+call camelcasemotion#CreateMotionMappings(',')
