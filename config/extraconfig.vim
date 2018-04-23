@@ -5,6 +5,7 @@ set cursorline
 set mouse=a
 set clipboard+=unnamedplus
 set number
+set inccommand=nosplit
 
 if exists("g:ctrl_user_command")
     unlet g:ctrlp_user_command
@@ -12,7 +13,7 @@ endif
 
 " Make search better
 set gdefault      " Never have to type /g at the end of search / replace again
-"set ignorecase    " case insensitive searching (unless specified)
+set ignorecase    " case insensitive searching (unless specified)
 set smartcase
 set nohlsearch
 set showmatch

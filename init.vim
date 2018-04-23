@@ -9,13 +9,11 @@ set rtp+=~/.config/vrvim/
 call plug#begin('~/.config/vrvim/plugged')
 
 "Python 
-" Plug 'Shougo/deoplete.nvim'
-" Plug 'Shougo/echodoc.vim'
 Plug 'davidhalter/jedi-vim'
+Plug 'zchee/deoplete-jedi'
 Plug 'klen/python-mode'
 Plug 'w0rp/ale'
-
-Plug 'simeji/winresizer'
+Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
 Plug 'bkad/CamelCaseMotion'
 Plug 'bling/vim-airline'
@@ -32,8 +30,8 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
 Plug 'rking/ag.vim'
-Plug 'roman/golden-ratio'
 Plug 'sheerun/vim-polyglot'
+Plug 'simeji/winresizer'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'

@@ -1,3 +1,3 @@
-let g:popup_on_dot = 1
-let g:jedi#use_splits_not_buffers = "right"
-let g:jedi#force_py_version = 2
+" let g:jedi#completions_enabled = 0
+let g:popup_on_dot = 0
+let g:jedi#use_splits_not_buffers = "winwidth"

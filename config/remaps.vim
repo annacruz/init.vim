@@ -7,9 +7,6 @@ noremap s :w<CR>
 "Search in the project with S
 nnoremap S :Ag! 
 
-" Save and Quit with Q
-nnoremap <silent>Q ZZ
-
 "Make Y great again
 nmap Y y$
 
@@ -17,7 +14,7 @@ nmap Y y$
 vnoremap y myy`y
 
 "Close quickfix
-map <silent> <F2> :ccl<CR>
+map <silent> Q :ccl<CR>
 
 "Search through buffers
 nnoremap <F3> :CtrlPBuffer<CR>
@@ -39,3 +36,9 @@ endfunction
 
 nnoremap # #zz
 nnoremap * *zz
+
+" Turn word into uppercase, continue typing
+map! <C-F> <Esc>gUiw`]a
+
+
+nnoremap r %
