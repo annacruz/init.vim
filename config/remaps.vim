@@ -39,6 +39,3 @@ nnoremap * *zz
 
 " Turn word into uppercase, continue typing
 map! <C-F> <Esc>gUiw`]a
-
-
-nnoremap r %

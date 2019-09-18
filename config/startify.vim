@@ -27,7 +27,7 @@ let g:startify_skiplist = [
       \ ]
 
 let g:startify_bookmarks = [
-      \ { 'u': '~/.config/vrvim/init.vim' },
+      \ { 'u': '~/.config/nvim/init.vim' },
       \ ]
 
 hi StartifyBracket ctermfg=240

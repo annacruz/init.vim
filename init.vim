@@ -9,9 +9,10 @@ set rtp+=~/.config/vrvim/
 call plug#begin('~/.config/vrvim/plugged')
 
 "Python 
-Plug 'davidhalter/jedi-vim'
-Plug 'zchee/deoplete-jedi'
-Plug 'klen/python-mode'
+" Plug 'davidhalter/jedi-vim'
+" Plug 'zchee/deoplete-jedi'
+" Plug 'klen/python-mode'
+
 Plug 'w0rp/ale'
 Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
@@ -26,8 +27,8 @@ Plug 'greyblake/vim-preview'
 Plug 'groenewege/vim-less'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-user'
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'majutsushi/tagbar'
+" Plug 'ludovicchabant/vim-gutentags'
+" Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
 Plug 'rking/ag.vim'
 Plug 'sheerun/vim-polyglot'
@@ -43,8 +44,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'wellle/targets.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
-
 
 filetype plugin indent on
 
