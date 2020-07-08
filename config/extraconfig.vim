@@ -3,8 +3,10 @@ set splitright
 set scrolloff=5
 set cursorline
 set mouse=a
+" Clipboard and standard buffer are the same
 set clipboard+=unnamedplus
 set number
+" preview when searching / replacing
 set inccommand=nosplit
 
 if exists("g:ctrl_user_command")

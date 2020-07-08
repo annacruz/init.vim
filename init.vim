@@ -13,38 +13,33 @@ call plug#begin('~/.config/vrvim/plugged')
 " Plug 'zchee/deoplete-jedi'
 " Plug 'klen/python-mode'
 
-Plug 'w0rp/ale'
-Plug 'ervandew/supertab'
-Plug 'airblade/vim-gitgutter'
-Plug 'bkad/CamelCaseMotion'
-Plug 'bling/vim-airline'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'flazz/vim-colorschemes'
-Plug 'gmarik/Vundle.vim'
-Plug 'greyblake/vim-preview'
-Plug 'groenewege/vim-less'
-Plug 'kana/vim-textobj-entire'
+Plug 'w0rp/ale' " Syntax checker
+Plug 'airblade/vim-gitgutter' " Work with git hunks
+Plug 'bkad/CamelCaseMotion' " consider camelCase as words
+Plug 'bling/vim-airline' " nice bottom bar
+Plug 'christoomey/vim-tmux-navigator' " tmux shortcuts to navigate buffers
+Plug 'ctrlpvim/ctrlp.vim' " fuzzy finder
+Plug 'easymotion/vim-easymotion' " jump to letters / words
+Plug 'flazz/vim-colorschemes' " extra colorschemes
+Plug 'greyblake/vim-preview' " work with MD files
+Plug 'kana/vim-textobj-entire' " add die to delete all buffer text
 Plug 'kana/vim-textobj-user'
-" Plug 'ludovicchabant/vim-gutentags'
-" Plug 'majutsushi/tagbar'
-Plug 'mhinz/vim-startify'
-Plug 'rking/ag.vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'simeji/winresizer'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rhubarb'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-sleuth'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-vinegar'
-Plug 'wellle/targets.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'majutsushi/tagbar' " add tagbar -> use F2
+Plug 'mhinz/vim-startify' " Start screen
+Plug 'rking/ag.vim' " Replacement for grep
+Plug 'sheerun/vim-polyglot' " Syntax for different languages
+Plug 'tpope/vim-commentary' " use operator gc for comments
+Plug 'tpope/vim-fugitive' " Git inside vim
+Plug 'tpope/vim-repeat' " more powerful dot (.)
+Plug 'tpope/vim-rhubarb' " add Gbrowse
+Plug 'tpope/vim-sensible' " standard vim configs
+Plug 'tpope/vim-sleuth' " fix tab
+Plug 'tpope/vim-surround' " work with brackets, quotes etc
+Plug 'tpope/vim-unimpaired' " all the [b ]b mappings
+Plug 'tpope/vim-vinegar' "file explorer
+Plug 'wellle/targets.vim' " added targets
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " autocomplete
+Plug 'mechatroner/rainbow_csv' " csv software
 call plug#end()
 
 filetype plugin indent on

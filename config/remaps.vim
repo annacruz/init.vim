@@ -1,32 +1,36 @@
-"Copy file name to buffer
-noremap <silent>+ :let @*=@%<CR>
+" Custom remappings
+
+"Copy file name to buffer - fy - file yank
+noremap <Space>fy :let @*=@%<CR>
 
 "Save files on s
 noremap s :w<CR>
 
-"Search in the project with S
+"Search text in the project with S
 nnoremap S :Ag! 
 
-"Make Y great again
+" Fix Y so it copies from cursor to end-of-line
+" Same behavior of D and C
 nmap Y y$
 
-"Yank without jank
+" After copying blocks of text in visual mode,
+" do not move the cursor
 vnoremap y myy`y
 
-"Close quickfix
+"Close quickfix list
 map <silent> Q :ccl<CR>
 
-"Search through buffers
-nnoremap <F3> :CtrlPBuffer<CR>
+"Search file through buffers - file list
+nnoremap <Space>fl :CtrlPBuffer<CR>
 
 "Search word in project
-nnoremap K yiw:Ag! <C-R>"<CR>
+nnoremap <Space>sP yiw:Ag! <C-R>"<CR>
 
-"More useful e AND E
+" We really only use e and E to add stuff to end of words
 nnoremap e ea
 nnoremap E Ea
 
-"Run macros on every line visual mode
+"Run a macro on every line in visual mode
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
 function! ExecuteMacroOverVisualRange()
@@ -38,4 +42,7 @@ nnoremap # #zz
 nnoremap * *zz
 
 " Turn word into uppercase, continue typing
+"
+" Example: Enter inser mode, type myvar, hit Control+F, MYVAR and still insert
+" mode
 map! <C-F> <Esc>gUiw`]a
