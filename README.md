@@ -17,6 +17,6 @@ Python plugins require a venv active and extensions like `jedi`, `pyls` etc
 ## Set node version for Autocomplete
 To use coc.vim remember to set node version in `config/coc.vim`
 
-For node version `10.20.1` for example:
+For node version `10.20.1` and using `nvm` for example:
 
 `let g:coc_node_path=$HOME."/.nvm/versions/node/v10.20.1/bin/node"`
