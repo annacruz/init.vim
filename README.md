@@ -4,7 +4,7 @@ Use `neovim-unix` as the main branch.
 
 ## Download
 
-Pull this repo at the standard Neovim config path: `~/.config/nvim/init.vim`
+Pull this repo at the standard Neovim config path: `~/.config/nvim/`
 
 ## Install
 
