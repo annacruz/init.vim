@@ -4,9 +4,9 @@ set showcmd
 filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.config/vrvim/
+set rtp+=~/.config/nvim/
 
-call plug#begin('~/.config/vrvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 "Python 
 " Plug 'davidhalter/jedi-vim'
@@ -38,8 +38,24 @@ Plug 'tpope/vim-surround' " work with brackets, quotes etc
 Plug 'tpope/vim-unimpaired' " all the [b ]b mappings
 Plug 'tpope/vim-vinegar' "file explorer
 Plug 'wellle/targets.vim' " added targets
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " autocomplete
 Plug 'mechatroner/rainbow_csv' " csv software
+
+" Ruby
+Plug 'tpope/vim-endwise' "help end ruby structures automatically
+Plug 'tpope/vim-rails' "Massive vim plugin for editing ruby on rails
+Plug 'tpope/vim-bundler' "Vim goodies for Bundler, rake and rails
+Plug 'tpope/vim-ruby'
+Plug 'ecomba/vim-ruby-refactoring'
+
+" Autocompletion
+" Plug 'neoclide/coc.nvim', {'branch': 'release'} " autocomplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neco-syntax'
+Plug 'ecomba/vim-ruby-refactoring'
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+
 call plug#end()
 
 filetype plugin indent on
