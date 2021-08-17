@@ -48,13 +48,9 @@ Plug 'tpope/vim-ruby'
 Plug 'ecomba/vim-ruby-refactoring'
 
 " Autocompletion
-" Plug 'neoclide/coc.nvim', {'branch': 'release'} " autocomplete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/neco-syntax'
-Plug 'ecomba/vim-ruby-refactoring'
-Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
 
