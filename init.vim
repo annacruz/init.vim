@@ -52,6 +52,9 @@ Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 Plug 'neovim/nvim-lspconfig'
 
+" Themes
+Plug 'frenzyexists/aquarium-vim', { 'branch': 'develop' }
+
 call plug#end()
 
 filetype plugin indent on
