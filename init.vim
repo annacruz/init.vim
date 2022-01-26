@@ -21,7 +21,6 @@ Plug 'christoomey/vim-tmux-navigator' " tmux shortcuts to navigate buffers
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy finder
 Plug 'easymotion/vim-easymotion' " jump to letters / words
 Plug 'flazz/vim-colorschemes' " extra colorschemes
-Plug 'greyblake/vim-preview' " work with MD files
 Plug 'kana/vim-textobj-entire' " add die to delete all buffer text
 Plug 'kana/vim-textobj-user'
 Plug 'majutsushi/tagbar' " add tagbar -> use F2
@@ -39,6 +38,7 @@ Plug 'tpope/vim-unimpaired' " all the [b ]b mappings
 Plug 'tpope/vim-vinegar' "file explorer
 Plug 'wellle/targets.vim' " added targets to git delete
 Plug 'mechatroner/rainbow_csv' " csv software
+Plug 'ellisonleao/glow.nvim' " Preview markdown
 
 " Ruby
 Plug 'tpope/vim-endwise' "help end ruby structures automatically
