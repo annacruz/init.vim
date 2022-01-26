@@ -44,8 +44,6 @@ Plug 'ellisonleao/glow.nvim' " Preview markdown
 Plug 'tpope/vim-endwise' "help end ruby structures automatically
 Plug 'tpope/vim-rails' "Massive vim plugin for editing ruby on rails
 Plug 'tpope/vim-bundler' "Vim goodies for Bundler, rake and rails
-Plug 'tpope/vim-ruby'
-Plug 'ecomba/vim-ruby-refactoring'
 
 " Autocompletion
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
