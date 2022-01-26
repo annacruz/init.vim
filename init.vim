@@ -37,7 +37,7 @@ Plug 'tpope/vim-sleuth' " fix tab
 Plug 'tpope/vim-surround' " work with brackets, quotes etc
 Plug 'tpope/vim-unimpaired' " all the [b ]b mappings
 Plug 'tpope/vim-vinegar' "file explorer
-Plug 'wellle/targets.vim' " added targets
+Plug 'wellle/targets.vim' " added targets to git delete
 Plug 'mechatroner/rainbow_csv' " csv software
 
 " Ruby
