@@ -1,5 +1,5 @@
 set nocompatible
-map <Space> <Leader>
+let mapleader = " " "map leader to space
 set showcmd
 filetype off
 

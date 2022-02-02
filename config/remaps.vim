@@ -46,3 +46,6 @@ nnoremap * *zz
 " Example: Enter inser mode, type myvar, hit Control+F, MYVAR and still insert
 " mode
 map! <C-F> <Esc>gUiw`]a
+
+"Reload file (useful to get net configurations)
+map <Leader>R :source %
