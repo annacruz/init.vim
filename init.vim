@@ -5,13 +5,7 @@ filetype off
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.config/nvim/
-
 call plug#begin('~/.config/nvim/plugged')
-
-"Python 
-" Plug 'davidhalter/jedi-vim'
-" Plug 'zchee/deoplete-jedi'
-" Plug 'klen/python-mode'
 
 Plug 'w0rp/ale' " Syntax checker
 Plug 'airblade/vim-gitgutter' " Work with git hunks
@@ -44,6 +38,11 @@ Plug 'ellisonleao/glow.nvim' " Preview markdown
 Plug 'tpope/vim-endwise' "help end ruby structures automatically
 Plug 'tpope/vim-rails' "Massive vim plugin for editing ruby on rails
 Plug 'tpope/vim-bundler' "Vim goodies for Bundler, rake and rails
+
+" Python 
+"Plug 'davidhalter/jedi-vim'
+"Plug 'zchee/deoplete-jedi'
+"Plug 'klen/python-mode'
 
 " Autocompletion
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
